@@ -13,10 +13,12 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    ../../source/qcgaugewidget.cpp
+        mainwindow.cpp
 
-HEADERS  += mainwindow.h \
-    ../../source/qcgaugewidget.h
+HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+LIBS += -L$$OUT_PWD/../../source/ -llibQtCustomGaugeWidget
+INCLUDEPATH += $$PWD/../../source
+DEPENDPATH += $$PWD/../../source
